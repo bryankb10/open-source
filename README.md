@@ -1,2 +1,1 @@
-# Hello World
 # open-source
