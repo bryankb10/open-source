@@ -1,3 +1,4 @@
 # open-source
 hai bebek 
-sjnajsnfaf
+guru tolol
+mana bisa contribution ku cuman sedikit anjay
