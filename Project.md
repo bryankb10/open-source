@@ -5,6 +5,6 @@ Our project is to create a restaurant menu website with a variety of food and dr
 1. Functions:
    - Users can scan the QR code to send them to the menu website
    - Users input their name, phone number and line id before seeing the menu
-   - Allows user to choose different categories of the menu,
+   - Allows user to choose different categories of the menu, such as main course, beverages, snacks
 
 2. Implementation:
