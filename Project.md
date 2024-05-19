@@ -8,5 +8,6 @@ Our project is to create a restaurant menu website with a variety of food and dr
    - Allows user to choose different categories of the menu, such as main course, beverages, snacks
    - Users can see pictures and price for the menus
    - Users can choose what to order by pressing the picture of foods and drinks, as well as input the quantity
+   - An add-on screen will appear after pressing the menu to ask for add-ons such as soup, sauce, and others, the web will also ask the quantity of the order
 
 2. Implementation:
