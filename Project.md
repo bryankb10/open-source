@@ -7,5 +7,6 @@ Our project is to create a restaurant menu website with a variety of food and dr
    - Users input their name, phone number and line id before seeing the menu
    - Allows user to choose different categories of the menu, such as main course, beverages, snacks
    - Users can see pictures and price for the menus
+   - Users can choose what to order by pressing the picture of foods and drinks, as well as input the quantity
 
 2. Implementation:
