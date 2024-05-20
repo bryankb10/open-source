@@ -1,6 +1,6 @@
 # Restaurant Menu Website
 
-Our project is to create a restaurant menu website with a variety of food and drinks, which people can enter by scanning a QR code. People then can order the items and the website will save the data of those orders.The goal is to provide a smooth and efficient way for customers to view the restaurant's menu and place orders directly from their smartphones, improving both the customer experience and the restaurant's operational efficiency.
+Our project is to create a restaurant menu website with a variety of food and drinks, which people can enter by scanning a QR code. People then can order the items and the website will save the data of those orders. The goal is to provide a smooth and efficient way for customers to view the restaurant's menu and place orders directly from their smartphones, improving both the customer experience and the restaurant's operational efficiency.
 
 1. Functions:
    - Users can scan the QR code to send them to the menu website
