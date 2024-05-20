@@ -11,3 +11,6 @@ Our project is to create a restaurant menu website with a variety of food and dr
    - An add-on screen will appear after pressing the menu to ask for add-ons such as soup, sauce, and others, the web will also ask the quantity of the order
 
 2. Implementation:
+   - Use the QR code generator which contains the url of the website
+   - Use database mySQL to create the menus
+   - Use PHP to input the user’s name phone number, and line ID
