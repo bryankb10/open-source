@@ -19,4 +19,8 @@ Our project is to create a restaurant menu website with a variety of food and dr
    - Use the QR code generator which contains the url of the website
    - Use database mySQL to create the menus
    - Use PHP to input the user’s name phone number, and line ID
-   - 
+   - Use HTML and CSS to create the design of the menu, including the food and drinks pictures, and the categories of the items
+   - Generate a box asking the quantity when user press the picture of  item
+   - Create a submit button using input type for the user to submit their order and got to the checkout
+   - After pressing the submit button, show all of the items, the total price and queue number
+
