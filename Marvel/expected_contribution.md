@@ -1,4 +1,4 @@
-name : 張錫恩
+Name : 張錫恩
 
 Student ID : 411855330
 
