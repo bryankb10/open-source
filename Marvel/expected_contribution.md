@@ -4,4 +4,4 @@ Student ID : 411855330
 
 Expected contribution : 17%
 
-Contribution : Web design for queue number
+Contribution : Making the webpage for queue number
