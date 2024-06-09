@@ -5,7 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        body {
+            margin:0;
+            padding:0;
+            height:100%;
+            background-color:bisque;
+            display: flex;
+            justify-content:center;
+            text-align:center;
+            flex-direction: column;
+        }
+        h2 {
+            width:100%;
+            height:40px;
+            background-color:brown;
+            font-family:'Verdana';
+            font-weight:bold;
+            text-align:center;
+            color:yellow;
+            margin:0;
+        }
     </style>
 </head>
 </html>
