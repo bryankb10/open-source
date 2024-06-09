@@ -116,12 +116,13 @@ if (isset($_SESSION['history']) && !empty($_SESSION['history'])) {
         echo '<tr><th colspan="2">Total</th><th>$' . $total . '</th></tr>';
         echo "</table>";
         echo "<div class='container'>";
-        echo "<form method='POST' action='customer_details.php'>"; // Added action attribute
-        echo "<label><input type='submit' name='checkout' value='Checkout'><span class='button-checkout'>Checkout</span></label>";
-        echo "</form>";
         echo "<form method='POST' action='menurestaurant.php'>"; // Added action attribute
         echo "<label><input type='submit' name='return' value='Return'><span class='button-return'>Return</span></label>";
+        echo "</form>";
+        echo "<form method='POST' action='customer_details.php'>"; // Added action attribute
+        echo "<label><input type='submit' name='checkout' value='Checkout'><span class='button-checkout'>Checkout</span></label>";
         echo "</form></div>";
+        
 } else {
     header("Location: finalizeorder.php"); // Redirect to finalizeorder.php if no history is found
     exit();
