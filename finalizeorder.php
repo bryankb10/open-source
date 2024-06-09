@@ -40,8 +40,7 @@
         $customerID = $customerData['max_id']; // Retrieve the 'id' from the fetched result
         foreach ($_SESSION['history'] as $item) {
             $total += $item[1] * $item[2];
-            $quantity += $item[2];
-            $newstmt->execute([$item[3], $customerID, $total, $quantity]); // Use the retrieved 'id'
+            $newstmt->execute([$item[3], $customerID, $total, $item[2]]); // Use the retrieved 'id'
         }
         $newquery = "SELECT * FROM customerData ORDER BY id DESC LIMIT 1";
         $newstmt = $pdo->query($newquery);
