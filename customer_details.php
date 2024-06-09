@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])) {
     $phone = $_POST['phoneNo'];
     $order_type = $_POST['order_type'];
 
-    $date = new DateTime("now", new DateTimeZone('UTC'));
+    $date = new DateTime("now", new DateTimeZone('Asia/Taipei'));
     $stmt = $pdo->prepare("INSERT INTO customerData (cName, phoneNo, transactionOrder, dateOrder) VALUES (?, ?, ?, ?)");
     $stmt->execute([$name, $phone, $order_type, $date->format('Y-m-d H:i:s')]);
     header("Location: finalizeorder.php");
