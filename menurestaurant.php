@@ -31,6 +31,32 @@
             list-style:none;
             display:inline;
         }
+        li:hover{
+            color:brown;
+            background-color:white;
+            cursor:pointer;
+        }
+        .menuTable {
+            float:left;
+            margin-left:250px;
+        }
+        .menuTable td {
+            font-family:'Verdana';
+            text-align:center;
+            font-weight:bold;
+            font-size:20px;
+            padding:20px 50px 20px 50px;
+        }
+        .box{
+            width:250px;
+            height:350px;
+            border: 2px solid black;
+            border-radius: 10pt;
+            margin-top:25px;
+            color:white;
+            background-color:brown;
+            margin-left:1000px;
+        }
     </style>
 </head>
 <?php
