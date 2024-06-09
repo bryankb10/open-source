@@ -25,6 +25,23 @@
             color:yellow;
             margin:0;
         }
+        table {
+            border-collapse: collapse;
+            margin: 30px 500px 0 500px;
+            text-align:center;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align:center;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 </html>
