@@ -64,7 +64,7 @@
             background-color:brown;
             margin-left:50vw;
             flex-direction: column;
-            height: 32.3vw;
+            height: 34.3vw;
             display: flex;
         }
         .orderList {
@@ -87,7 +87,6 @@
             display: inline-block;
             font-size:1vw;
             margin-left:3.1vw;
-            margin-top: 0.5vw;
         }
         .add{
             width: 4vw;
@@ -178,11 +177,12 @@
         echo "<tr style=font-size:1vw;>";
         echo "<td>".$h[0]."</td><td>$".$h[1]."</td><td>".$h[2]."x</td></tr>";
     }
-    echo "</table>";
     
     echo "</div>";
+
     echo "<div class=btn-holder>";
-    echo "<input type='submit' class='btn-holder' name='checkout' value='Checkout'>";
+    echo "<input type='submit' class='btn-holder' name='checkout' value='Checkout' style= 'margin-top:33.5vw;'>";
     echo "</div>";
+    echo "</table>";
     echo "</form>";
 ?>
