@@ -57,6 +57,27 @@
             background-color:brown;
             margin-left:1000px;
         }
+        .orderList {
+            width:150px;
+            height:50px;
+            border: 2px solid black;
+            border-radius: 20pt;
+            text-align:center;
+            margin-top:25px;
+            color:yellow;
+            background-color:brown; 
+            margin-left:1053px;
+        }
+        .box {
+            justify-content: space-between;
+            flex-direction: column;
+            height: 60vh;
+            display: flex;
+        }
+        .box .btn-holder {
+            justify-content: center;
+            display: flex;
+        }
     </style>
 </head>
 <?php
