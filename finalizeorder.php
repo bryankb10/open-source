@@ -129,8 +129,8 @@
             echo "<h3>Receipt</h3><br>";
             echo "<div class='table1'>";
             echo "<h2>No. ".$customerData['id']."</h2><br>";
-            echo "<div class='text1'>Name: ".$customerData['cName']."<br><br><br>";
-            echo "<div class='text1'>Phone No.: ".$customerData['phoneNo']."<br><br><br>";
+            echo "<div class='text1'>Name: ".$customerData['cName']."<br><br>";
+            echo "Phone No: ".$customerData['phoneNo']."<br><br>";
             echo $customerData['transactionOrder']."<br></div>";
             echo "</div>";
             echo "<div class='table2'>";
