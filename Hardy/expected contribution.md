@@ -4,4 +4,4 @@ student id : 411855488
 
 expected contribution percentage : 17%
 
-contributions : making the qr code.
+contributions : making the qr code and designing the 'summaryrestaurant.php'.
