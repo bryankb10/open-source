@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Details</title>
     <style>
-        
+        body {
+            margin:0;
+            padding:0;
+            height:100%;
+            background-color:bisque;
+            display: flex;
+            justify-content: center;
+            text-align:center;
+            flex-direction: column;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type=text], input[type=tel], input[type=number] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        h2 {
+            width:100%;
+            height:40px;
+            background-color:brown;
+            font-family:'Verdana';
+            font-weight:bold;
+            text-align:center;
+            color:yellow;
+            margin:0;
+        }
     </style>
 </head>
 </html>
