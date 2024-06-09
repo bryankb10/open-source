@@ -11,23 +11,25 @@
             padding:0;
             height:100%;
             background-color:bisque;
+            font-size:1vw;
         }
         .menuBar {
             width:100%;
-            height:40px;
+            height:3vw;
             background-color:brown;
-            font-size:18px;
+            font-size:1.6vw;
             font-family:'Courier New',Courier,monospace;
             font-weight:bold;
             text-align:center;
-            text-shadow:4px 2px 10px yellow;
+            text-shadow:0.2vw 0.1vw 0.5vw yellow;
+            margin-bottom:1vw;
         }
         ul {
-            padding:8px 0px;
-            margin:0px;
+            padding:0.4vw 0;
+            margin:0;
         }
         .menuBar li {
-            padding:5px 20px 5px 20px;
+            padding:0.25vw 1vw 0.25vw 1vw;
             list-style:none;
             display:inline;
         }
@@ -37,46 +39,64 @@
             cursor:pointer;
         }
         .menuTable {
+            padding:1vw 1vw 1vw 1vw;
             float:left;
-            margin-left:250px;
+            margin-left:12.5vw;
+            font-size:1vw;
         }
-        .menuTable td {
+        .menuTable td{
             font-family:'Verdana';
             text-align:center;
             font-weight:bold;
-            font-size:20px;
-            padding:20px 50px 20px 50px;
+            padding:1vw 2vw 1vw 2vw;
+            position: relative;
+        }
+        tr, th, td{
+            padding: 0.2vw 0.5vw 0.2vw 0.5vw;
         }
         .box{
-            width:250px;
-            height:350px;
-            border: 2px solid black;
-            border-radius: 10pt;
-            margin-top:25px;
+            width:19.5vw;
+            height:17.5vw;
+            border: 0.1vw solid black;
+            border-radius: 1vw;
+            margin-top:1.25vw;
             color:white;
             background-color:brown;
-            margin-left:1000px;
+            margin-left:50vw;
+            flex-direction: column;
+            height: 32.3vw;
+            display: flex;
         }
         .orderList {
-            width:150px;
-            height:50px;
-            border: 2px solid black;
-            border-radius: 20pt;
+            width:8vw;
+            height:1.5vw;
+            border: 0.1vw solid black;
+            border-radius: 2vw;
+            background-color:white;
+            margin-left:5.9vw;
             text-align:center;
-            margin-top:25px;
-            color:yellow;
-            background-color:brown; 
-            margin-left:1053px;
+            font-size:1.3vw;
+            font-weight: bold;
+            color:darkorange;
         }
-        .box {
-            justify-content: space-between;
-            flex-direction: column;
-            height: 60vh;
-            display: flex;
-        }
-        .box .btn-holder {
+        .btn-holder {
+            width: 7vw;
+            height: 2vw;
+            border-radius: 1vw;
             justify-content: center;
-            display: flex;
+            display: inline-block;
+            font-size:1vw;
+            margin-left:3.1vw;
+            margin-top: 0.5vw;
+        }
+        .add{
+            width: 4vw;
+            height: 2vw;
+            border: 0.1vw solid black;
+            border-radius: 1vw;
+            justify-content: center;
+            display: inline-block;
+            font-size:1vw;
         }
     </style>
 </head>
@@ -133,7 +153,7 @@
             echo "<tr>";
             foreach ($menu as $row) {
                 $pic = $row['imagePath'];
-                echo "<td> <form method='POST' action=''><a href=http://www.google.com><img src='$pic' style='max-width: 200px; max-height: 200px;'></a>"."<br>".$row['mName']."<br>".$row['price']."<br><input type=submit name='btnadd' value='add'>";
+                echo "<td> <form method='POST' action=''><a href=http://www.google.com><img src='$pic' style='max-width: 16vw; max-height: 14vw;'></a>"."<br>".$row['mName']."<br>".$row['price']."<br><input type=submit class='add' name='btnadd' value='add'>";
                 echo "<input type=hidden name=txtMenuID value='".$row['id']."'>";
                 echo "<input type=hidden name=txtNama value='".$row['mName']."'>";
                 echo "<input type=hidden name=txtHarga value='".$row['price']."'>";
@@ -146,20 +166,23 @@
             echo "</tr></table>";
         }
     }
-    echo "<div class='orderList'>";
-    echo "   <h2>Order List</h2>";
-    echo "</div>";
+    
+    
     echo "<form method='POST' action = 'summaryrestaurant.php'>";
     echo "<div class='box'>";
-    echo "<table border='0' style='border-spacing:5pt; text-align:center;'>";
+    echo "<table border='0' style='border-spacing:1vw; text-align:left;'>";
+    echo "<div class='orderList'>";
+    echo "Order List";
+    echo "</div>";
     foreach ($history as $h) {
-        echo "<tr style=font-size:18px;>";
+        echo "<tr style=font-size:1vw;>";
         echo "<td>".$h[0]."</td><td>$".$h[1]."</td><td>".$h[2]."x</td></tr>";
     }
     echo "</table>";
-    echo "<div class=btn-holder>";
-    echo "<input type='submit' name='checkout' value='Checkout'>";
+    
     echo "</div>";
+    echo "<div class=btn-holder>";
+    echo "<input type='submit' class='btn-holder' name='checkout' value='Checkout'>";
     echo "</div>";
     echo "</form>";
 ?>
