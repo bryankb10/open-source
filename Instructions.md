@@ -23,4 +23,4 @@ Now, we need to check the ip addr by typing
 
 ip addr
 
-and type the ip address in the browser. This will show the "open-source" folder. Press that folder and then press the menurestaurant.php to start the webpage. We also can use qr code by pressing the qrcode_generator.php to make it available in mobile phone. However, in order for thisbto work, the mobile device must connect to the same WiFi network with the computwr running the webpage. 
+and type the ip address in the browser. This will show the "open-source" folder. Press that folder and then press the menurestaurant.php to start the webpage. We also can use qr code by pressing the qrcode_generator.php to make it available in mobile phone. However, in order for thisbto work, the mobile device must connect to the same WiFi network with the computer running the webpage. 
