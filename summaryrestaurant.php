@@ -8,39 +8,89 @@
         body {
             margin:0;
             padding:0;
-            height:100%;
             background-color:bisque;
             display: flex;
             justify-content: center;
             text-align:center;
             flex-direction: column;
         }
+        .container {
+            text-align: center;
+            margin-top: 1.8vw;
+        }
         h2 {
-            width:100%;
-            height:40px;
+            height:4vw;
             background-color:brown;
-            font-family:'Verdana';
-            font-weight:bold;
+            font-family:'Courgette';
+            font-style: italic;
             text-align:center;
             color:yellow;
             margin:0;
+            font-size: 3vw;
+            text-shadow: 0.2vw 0.2vw 0.3vw rgba(0, 0, 0, 0.5);
         }
         table {
             border-collapse: collapse;
-            margin: 30px 500px 0 500px;
+            margin: 1.5vw 37vw 0 37vw;
             text-align:center;
+            background-color:pink;
+            font-family:'inter', sans-serif;
+            border: 0.05vw solid black;
+            box-shadow: 0.5vw 0.5vw 0.25vw rgba(0, 0, 0, 0.5);
         }
-        table, th, td {
-            border: 1px solid black;
-            text-align:center;
+        tr, th, td{
+            padding: 0.5vw;
+            text-align: left;
+            color: grey;
+            font-size: 1.3vw;
         }
-        th, td {
-            padding: 10px;
+        td {
+            color: black;
+            border-bottom: 0.1vw solid black;
+            position: relative;
+        }
+        .button-return {
+            width: 7vw;
+            height: 2vw;
+            display: inline-block;
+            background-color: #000;
+            color: #FFF;
+            font-family: 'Inter', sans-serif;
             text-align: center;
+            line-height: 2vw;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        form {
+        .button-checkout {
+            width: 7vw;
+            height: 2vw;
+            display: inline-block;
+            background-color: #FFF;
+            color: #000;
+            font-family: 'Inter', sans-serif;
             text-align: center;
-            margin-top: 20px;
+            line-height: 2vw;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+            
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 2.5vw;
+            cursor: pointer;
+            font-size: 1vw;
+            user-select: none;
+        }
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -62,14 +112,18 @@ if (isset($_SESSION['history']) && !empty($_SESSION['history'])) {
             echo "<td>$".$item[1] * $item[2]."</td>";
             echo "</tr>";
         }
+        
         echo '<tr><th colspan="2">Total</th><th>$' . $total . '</th></tr>';
         echo "</table>";
+        echo "<div class='container'>";
         echo "<form method='POST' action='customer_details.php'>"; // Added action attribute
-        echo "<input type='submit' name='checkout' value='Checkout'>";
+        echo "<label><input type='submit' name='checkout' value='Checkout'><span class='button-checkout'>Checkout</span></label>";
         echo "</form>";
+        echo "<form method='POST' action='menurestaurant.php'>"; // Added action attribute
+        echo "<label><input type='submit' name='return' value='Return'><span class='button-return'>Return</span></label>";
+        echo "</form></div>";
 } else {
     header("Location: finalizeorder.php"); // Redirect to finalizeorder.php if no history is found
     exit();
 }
 ?>
-
