@@ -6,7 +6,31 @@
     <title>Project</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        
+        body {
+            margin:0;
+            padding:0;
+            height:100%;
+            background-color:bisque;
+        }
+        .menuBar {
+            width:100%;
+            height:40px;
+            background-color:brown;
+            font-size:18px;
+            font-family:'Courier New',Courier,monospace;
+            font-weight:bold;
+            text-align:center;
+            text-shadow:4px 2px 10px yellow;
+        }
+        ul {
+            padding:8px 0px;
+            margin:0px;
+        }
+        .menuBar li {
+            padding:5px 20px 5px 20px;
+            list-style:none;
+            display:inline;
+        }
     </style>
 </head>
 <?php
