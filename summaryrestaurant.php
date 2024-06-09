@@ -11,7 +11,7 @@
             height:100%;
             background-color:bisque;
             display: flex;
-            justify-content:center;
+            justify-content: center;
             text-align:center;
             flex-direction: column;
         }
@@ -72,5 +72,4 @@ if (isset($_SESSION['history']) && !empty($_SESSION['history'])) {
     exit();
 }
 ?>
-
 
