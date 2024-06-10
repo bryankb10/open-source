@@ -14,7 +14,7 @@ to identify you as the author of commits. Then we use the command
 cd /var/www/html
 
 
-to make our webpage available in the browser and use the git clone command to navigate to the directory where you want to clone the repository. To use the git clone command, type
+because this is the directory to make our webpage available in the browser and use the git clone command to navigate to the directory where you want to clone the repository. To use the git clone command, type
 
 
 sudo git clone https://github.com/bryankb10/open-source.git
