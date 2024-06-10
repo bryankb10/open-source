@@ -1,14 +1,6 @@
 # Instructions For Installation and Running
 
-In the Putty, we first need to write the command 
-
-
-git config --global user.name "Your Name"
-
-git config --global user.email "your_email@example.com"
-
-
-to identify you as the author of commits. Then we use the command 
+In the Putty, we first type the command 
 
 
 cd /var/www/html
