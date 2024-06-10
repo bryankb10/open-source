@@ -11,7 +11,19 @@ because this is the directory to make our webpage available in the browser and u
 
 sudo git clone https://github.com/bryankb10/open-source.git
 
-Now, we need to check the ip addr by typing
+We then need to create user and database in Mariadb, here are the steps and commands:
+
+1. access the DBMS: sudo mysql -u root
+   
+2. create the application user account: CREATE USER myapp IDENTIFIED BY '1234';
+
+3. create the database: CREATE DATABASE mydb;
+
+4. grant the permissions: GRANT ALL PRIVILEGES ON mydb.* TO myapp;
+
+5. re-login to the DBMS: mysql mydb -u myapp -p
+
+We finally create table and insert the tables by copying and pasting the tablerestaurant.sql file to Mariadb. Once done, type exit. Now, we need to check the ip addr by typing
 
 ip addr
 
