@@ -1,97 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Team Introduction</title>
-        <style>
-            body {
-                background-color: #82b7f9;
-                font-family: Arial, sans-serif;
-            }
-            h1 {
-                text-align: center;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                font-size: 30px;
-            }
-            .card {
-                background-color: aliceblue;
-                display: inline-block;
-                width: 250px;
-                margin: 25px;
-                padding: 15px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                transition: transform 0.5s;
-            }
-            .card:hover {
-                transform: translateY(-10px);
-                cursor: pointer;
-                flex-grow: 3;
-            }
-            .name {
-                font-size: 18px;
-                font-weight: bold;
-                color: #333;
-            }
-            .self-intro {
-                margin-top: 10px;
-                font-size: 14px;
-                color: #666;
-                display: none;
-            }
-            .box {
-                background-color: white;
-                border-style: solid;
-                border-color: black;
-                border-radius: 30px;
-                border-width: 5px;
-                height: 600px;
-                justify-content: center;
-            }
-        </style>
-        <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
-    </head>
-    <body>
-        <h1>TEAM INTRODUCTION</h1>
-        <div class="box">
-            <div class="card" _="on mouseenter set #intro1.style.display to 'block' on mouseleave set #intro1.style.display to 'none'">
-                <div class="name">Hardy Amuntai</div>
-                <div class="self-intro" id="intro1">
-                    My name is Hardy Amuntai, I am a third year computer science student from Indonesia.
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Introduction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #2f5a8f;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            color: white;
+        }
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 80%;
+            padding: 20px;
+            background-color: #f3f4f6;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            width: 120px;
+            height: 250px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .card:hover {
+            width: 300px;
+            height: 400px;
+            transform: scale(1.05);
+        }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .card:hover .name {
+            top: 10px;
+            left: 10px;
+            bottom: auto;
+        }
+        .self-intro {
+            margin-top: 10px;
+            font-size: 14px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #666;
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 40px;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .card:hover .self-intro {
+            display: block;
+        }
+        .card img {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            height: 60px;
+            width: 60px;
+            object-fit: scale-down;
+        }
+        .card:hover img {
+            display: block;
+        }
+    </style>    
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+</head>
+<body>
+    <h1>Team introduction</h1>
+    <div class="carousel">
+        <div class="card" _="on mouseenter set #intro1.style.display to 'block' then set body.style.backgroundColor to 'black' on mouseleave set #intro1.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
+            <div class="name">Hardy Amuntai</div>
+            <div class="self-intro" id="intro1">
+                <p>My name is Hardy Amuntai, I am a third year computer science student from Indonesia.</p>
+                <p>my hometown is Jakarta, Indonesia. My interests are watching movies and shows and i don't have any hobbies i just like doing a bunch of things..</p> 
             </div>
-            <div class="card" _="on mouseenter set #intro2.style.display to 'block' on mouseleave set #intro2.style.display to 'none'">
-                <div class="name">Bryan Kenneth Budiyantoro</div>
-                <div class="self-intro" id="intro2">
-                    My name is Bryan Kenneth Budiyantoro, I am a third year computer science student from Indonesia.
-                </div>
-            </div>
-            <div class="card" _="on mouseenter set #intro3.style.display to 'block' on mouseleave set #intro3.style.display to 'none'">
-                <div class="name">Javier Wibowo</div>
-                <div class="self-intro" id="intro3">
-                    My name is Javier Wibowo, I am a third year computer science student from Indonesia.
-                </div>
-            </div>
-            <div class="card" _="on mouseenter set #intro4.style.display to 'block' on mouseleave set #intro4.style.display to 'none'">
-                <div class="name">Jonathan Brian</div>
-                <div class="self-intro" id="intro4">
-                    My name is Jonathan Brian, I am a third year computer science student from Indonesia.
-                </div>
-            </div>
-            <div class="card" _="on mouseenter set #intro5.style.display to 'block' on mouseleave set #intro5.style.display to 'none'">
-                <div class="name">Christiela</div>
-                <div class="self-intro" id="intro5">
-                    My name is Christiela, I am a third year computer science student from Indonesia.
-                </div>
-            </div>
-            <div class="card" _="on mouseenter set #intro6.style.display to 'block' on mouseleave set #intro6.style.display to 'none'">
-                <div class="name">Marvel E.I</div>
-                <div class="self-intro" id="intro6">
-                    My name is Marvel E.I, I am a third year computer science student from Indonesia.
-                </div>
-            </div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokp-33811d30-d721-403e-8f05-de17d3253d81.png/v1/fill/w_1280,h_1150/role_ml_05_by_morphysss_dg1jokp-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE1MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rcC0zMzgxMWQzMC1kNzIxLTQwM2UtOGYwNS1kZTE3ZDMyNTNkODEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UdqnoqFKJ3X9rH34LfYla_ttclw30cf-M3fGITFjXr4" alt="tank">
         </div>
-    </body>
+        <div class="card" _="on mouseenter set #intro2.style.display to 'block' then set body.style.backgroundColor to '#6CACE4' on mouseleave set #intro2.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
+            <div class="name">Bryan Kenneth Budiyantoro</div>
+            <div class="self-intro" id="intro2">
+                My name is Bryan Kenneth Budiyantoro, I am a third year computer science student from Indonesia.
+            </div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jok1-2f8f38ab-68d5-4783-ae03-d682189289ad.png/v1/fill/w_1280,h_2270/role_ml_02_by_morphysss_dg1jok1-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI3MCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rMS0yZjhmMzhhYi02OGQ1LTQ3ODMtYWUwMy1kNjgyMTg5Mjg5YWQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.0xHxH1gE8jPOEZDKKkT8SqHRsp2GYBJB06UE312NRI0" alt="fighter">
+        </div>
+        <div class="card" _="on mouseenter set #intro3.style.display to 'block' then set body.style.backgroundColor to '#8558E4' on mouseleave set #intro3.style.display to 'none' then set body.style.backgroundColor to '#2f5a8f'">
+            <div class="name">Javier Wibowo</div>
+            <div class="self-intro" id="intro3">
+                My name is Javier Wibowo, I am a third year computer science student from Indonesia.
+            </div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jojq-72057fed-327e-49d0-b8a8-0c5eacd7594d.png/v1/fill/w_1280,h_2028/role_ml_01_by_morphysss_dg1jojq-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAyOCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9qcS03MjA1N2ZlZC0zMjdlLTQ5ZDAtYjhhOC0wYzVlYWNkNzU5NGQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.B_tzZAWsurJeHEY280ksu9uw_mKMy1iFAobQx2jBZPg" alt="marksman">
+        </div>
+        <div class="card" _="on mouseenter set #intro4.style.display to 'block' on mouseleave set #intro4.style.display to 'none'">
+            <div class="name">Jonathan Brian</div>
+            <div class="self-intro" id="intro4">
+                My name is Jonathan Brian, I am a third year computer science student from Indonesia.
+            </div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1joku-298a3207-39a0-465a-a9f3-61c625fbea96.png/v1/fill/w_1280,h_1164/role_ml_06_by_morphysss_dg1joku-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE2NCIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rdS0yOThhMzIwNy0zOWEwLTQ2NWEtYTlmMy02MWM2MjVmYmVhOTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.guPRFgnYvUCcHJBbu-EQsgs0jHfn3pS413TdiIJllvk" alt="hyper">
+        </div>
+        <div class="card" _="on mouseenter set #intro5.style.display to 'block' on mouseleave set #intro5.style.display to 'none'">
+            <div class="name">Christiela</div>
+            <div class="self-intro" id="intro5">
+                My name is Christiela, I am a third year computer science student from Indonesia.
+            </div>
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/02aa6f8d-3ac2-49ee-8e4e-c817641c81b7/dg1jokg-685d37d5-c110-48b3-a924-f36273e9bab2.png/v1/fill/w_1280,h_2497/role_ml_04_by_morphysss_dg1jokg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQ5NyIsInBhdGgiOiJcL2ZcLzAyYWE2ZjhkLTNhYzItNDllZS04ZTRlLWM4MTc2NDFjODFiN1wvZGcxam9rZy02ODVkMzdkNS1jMTEwLTQ4YjMtYTkyNC1mMzYyNzNlOWJhYjIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ho0ZRTeA2-UBoQBtEIKJPbu7s7jkK8Dh0CavEZHrF0g" alt="mage">
+        </div>
+    </div>
+
+</body>
 </html>
